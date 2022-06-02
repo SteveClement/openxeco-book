@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
         strategy:
             max-parallel: 4
         steps:
@@ -14,7 +14,7 @@ jobs:
 
         - name: Install honkit and dependencies
           run: |
-              sudo apt -y install libgif-dev calibre npm nodejs
+              sudo apt -y install libgif-dev npm nodejs calibre
               sudo npm config set strict-ssl false
               sudo npm cache clean -f
               npm install honkit
@@ -63,6 +63,6 @@ jobs:
         - name: Run honkit mobi
           run: |
               npx honkit mobi
-        - name: Run pdf converter
+        - name: Run honkit pdf
           run: |
-              ebook-convert book.epub book.pdf
+              npx honkit pdf
