@@ -1,0 +1,31 @@
+{
+    "title": "User guide of openXeco ecosystem management platform",
+    "description": "User guide of openXeco ecosystem management platform",
+    "language": "en",
+    "author": "openXeco Contributors",
+    "plugins": ["atoc", "github", "codesnippet", "last-modified", "anchors", "sitemap", "advanced-emoji", "image-class"],
+    "links": { "sidebar": { "openXeco @ GitHub": "https://github.com/CybersecurityLuxembourg", "PDF": "https://book.openxeco.org/book.pdf", "EPUB": "https://book.openxeco.org/book.epub", "MOBI": "https://book.openxeco.org/book.mobi"}},
+    "pluginsConfig": {
+        "github": {
+                "url": "https://github.com/CybersecurityLuxembourg/"
+        },
+        "twitter": {
+                "url": "https://www.twitter.com/cyberluxembourg/"
+        },
+        "sitemap": {
+                "hostname": "https://book.openxeco.org/"
+        },
+        "fontsettings": {
+            "theme": "white",
+            "family": "sans",
+            "size": 2
+        },
+        "styles": {
+            "website": "styles/website.css",
+            "ebook": "styles/ebook.css",
+            "pdf": "styles/pdf.css",
+            "mobi": "styles/mobi.css",
+            "epub": "styles/epub.css"
+        }
+}
+}

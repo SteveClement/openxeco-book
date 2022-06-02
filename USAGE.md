@@ -1,6 +1,3 @@
-
-
-
 # Compiling and Publishing the Book
 ## Installing dependencies
 ### Linux
