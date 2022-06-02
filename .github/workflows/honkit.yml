@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
         strategy:
             max-parallel: 4
         steps:
@@ -14,10 +14,9 @@ jobs:
 
         - name: Install honkit and dependencies
           run: |
-              sudo apt -y install libgif-dev npm nodejs wget
+              sudo apt -y install libgif-dev npm nodejs calibre
               sudo npm config set strict-ssl false
               sudo npm cache clean -f
-              wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
               npm install honkit
         - name: Install plugin-github
           run: |
