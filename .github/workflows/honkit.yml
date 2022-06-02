@@ -63,6 +63,6 @@ jobs:
         - name: Run honkit mobi
           run: |
               npx honkit mobi
-        - name: Run pdf converter
+        - name: Run honkit pdf
           run: |
-              ebook-convert book.epub book.pdf
+              npx honkit pdf
