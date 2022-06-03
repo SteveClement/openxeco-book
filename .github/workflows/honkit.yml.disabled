@@ -66,3 +66,20 @@ jobs:
         - name: Run honkit pdf
           run: |
               npx honkit pdf
+
+        # prepare release
+        - name: Get repository name
+          id: repository
+          run: echo "::set-output name=pathref::$(echo '${{ github.repository }}' | cut -d'/' -f2)-$(echo '${{ github.ref_name }}' | sed 's/[^[:alnum:]\.-]/_/g')"
+
+        - name: create artifact archive
+          run: |
+            tar -C _book/ -zcf ${{ steps.repository.outputs.pathref }}.tar.gz book.pdf book.epub book.mobi
+
+        - name: release
+          uses: softprops/action-gh-release@v1
+          with:
+            files: |
+              ${{ steps.repository.outputs.pathref }}.tar.gz
+            fail_on_unmatched_files: true
+          if: startsWith(github.ref, 'refs/tags/')
