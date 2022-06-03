@@ -1,0 +1,36 @@
+{
+  "name": "openxeco-book",
+  "description": "--- description: Introduction to openXeco - Open Source Ecosystem Management Tool ---",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "coffee-script": "^1.12.7",
+    "gitbook-plugin-atoc": "^1.0.3",
+    "honkit": "^3.7.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "honkit build",
+    "serve": "honkit serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CybersecurityLuxembourg/openxeco-book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CybersecurityLuxembourg/openxeco-book/issues"
+  },
+  "homepage": "https://github.com/CybersecurityLuxembourg/openxeco-book#readme",
+  "dependencies": {
+    "gitbook-plugin-advanced-emoji": "^0.2.2",
+    "gitbook-plugin-anchors": "^0.7.1",
+    "gitbook-plugin-codesnippet": "^1.2.0",
+    "gitbook-plugin-github": "^3.0.0",
+    "gitbook-plugin-image-class": "^1.0.5",
+    "gitbook-plugin-last-modified": "^1.0.0",
+    "gitbook-plugin-sitemap": "^1.2.0"
+  }
+}

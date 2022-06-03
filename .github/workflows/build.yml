@@ -1,0 +1,50 @@
+name: Honkit test
+
+on: 
+  push:
+    branches: [ 'main' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node-version: [ "18.x" ]
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: install calibre
+      run: sudo apt-get update && sudo apt -y install calibre
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: install node deps
+      run: npm -y install
+
+    - name: honkit build
+      run: |
+        npx -y honkit build
+        npx -y honkit pdf
+        npx -y honkit epub
+        npx -y honkit mobi
+
+    # prepare release
+    - name: Get repository name
+      id: repository
+      run: echo "::set-output name=pathref::$(echo '${{ github.repository }}' | cut -d'/' -f2)-$(echo '${{ github.ref_name }}' | sed 's/[^[:alnum:]\.-]/_/g')"
+
+    - name: create artifact archive
+      run: |
+        tar -zcf ${{ steps.repository.outputs.pathref }}.tar.gz book.pdf book.epub book.mobi
+
+    - name: release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          ${{ steps.repository.outputs.pathref }}.tar.gz
+        fail_on_unmatched_files: true
+      if: startsWith(github.ref, 'refs/tags/')
+
