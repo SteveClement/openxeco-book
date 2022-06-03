@@ -33,3 +33,4 @@ The openXeco user guide is dual-licensed under [GNU Affero General Public Licens
 
 * Copyright \(C\) 2022 [Steve Clement](https://github.com/SteveClement)
 * Copyright \(C\) 2022 [Alexis Prunier](https://github.com/alexisprunier)
+* Copyright \(C\) 2022 [Rémi Laurent](https://github.com/remil1000)
