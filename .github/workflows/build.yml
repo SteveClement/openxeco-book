@@ -16,17 +16,13 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install SSH Key
-      env:
-        DEPLOY: ${{ secrets.SSH_PRIVATE_KEY }}
-      if: env.DEPLOY != ''
+      if: github.repository == 'CybersecurityLuxembourg/openxeco-book'
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SSH_PRIVATE_KEY }} 
         known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
     - name: Adding Known Hosts
-      env:
-        DEPLOY: ${{ secrets.SSH_PRIVATE_KEY }}
-      if: env.DEPLOY != ''
+      if: github.repository == 'CybersecurityLuxembourg/openxeco-book'
       run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
     - name: install calibre
@@ -46,17 +42,6 @@ jobs:
         npx -y honkit pdf
         npx -y honkit epub
         npx -y honkit mobi
-    - name: Deploy with rsync
-      env:
-        DEPLOY: ${{ secrets.SSH_PRIVATE_KEY }}
-      if: env.DEPLOY != ''
-      run: |
-        mv book.pdf _book
-        mv book.epub _book
-        mv book.mobi _book
-        chmod +r _book/book.pdf _book/book.epub _book/book.mobi
-        cd _book
-        rsync -r --delete . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/doc.openxeco.org/
 
     # prepare release
     - name: Get repository name
@@ -75,3 +60,12 @@ jobs:
         fail_on_unmatched_files: true
       if: startsWith(github.ref, 'refs/tags/')
 
+    - name: Deploy with rsync
+      if: github.repository == 'CybersecurityLuxembourg/openxeco-book'
+      run: |
+        mv book.pdf _book
+        mv book.epub _book
+        mv book.mobi _book
+        chmod +r _book/book.pdf _book/book.epub _book/book.mobi
+        cd _book
+        rsync -r --delete . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/doc.openxeco.org/
