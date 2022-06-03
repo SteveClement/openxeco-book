@@ -14,16 +14,15 @@ jobs:
         node-version: [ "18.x" ]
     steps:
     - uses: actions/checkout@v2
-    env:
-      DEPLOY: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    if: env.DEPLOY != ''
     - name: Install SSH Key
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SSH_PRIVATE_KEY }} 
-    if: env.DEPLOY != ''
+      env:
+        DEPLOY: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Adding Known Hosts
+      if: env.DEPLOY != ''
       run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
     - name: install calibre
@@ -43,8 +42,8 @@ jobs:
         npx -y honkit pdf
         npx -y honkit epub
         npx -y honkit mobi
-    if: env.DEPLOY != ''
     - name: Deploy with rsync
+      if: env.DEPLOY != ''
       run: |
         mv book.pdf _book
         mv book.epub _book
