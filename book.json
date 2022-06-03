@@ -4,7 +4,7 @@
     "language": "en",
     "author": "openXeco Contributors",
     "plugins": ["atoc", "github", "codesnippet", "last-modified", "anchors", "sitemap", "advanced-emoji", "image-class"],
-    "links": { "sidebar": { "openXeco @ GitHub": "https://github.com/CybersecurityLuxembourg", "PDF": "https://book.openxeco.org/book.pdf", "EPUB": "https://book.openxeco.org/book.epub", "MOBI": "https://book.openxeco.org/book.mobi"}},
+    "links": { "sidebar": { "openXeco @ GitHub": "https://github.com/CybersecurityLuxembourg", "PDF": "https://doc.openxeco.org/book.pdf", "EPUB": "https://doc.openxeco.org/book.epub", "MOBI": "https://doc.openxeco.org/book.mobi"}},
     "pluginsConfig": {
         "github": {
                 "url": "https://github.com/CybersecurityLuxembourg/"
@@ -13,7 +13,7 @@
                 "url": "https://www.twitter.com/cyberluxembourg/"
         },
         "sitemap": {
-                "hostname": "https://book.openxeco.org/"
+                "hostname": "https://doc.openxeco.org/"
         },
         "fontsettings": {
             "theme": "white",
