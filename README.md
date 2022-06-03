@@ -25,7 +25,7 @@ We welcome contributions to the openXeco book. If you want to contribute, see ou
 
 ## Format
 
-OpenXeco book is available in [HTML](https://book.openxeco.org), [PDF](https://book.openxeco.org/book.pdf), [ePub](https://book.openxeco.org/book.epub) and [Kindle mobi format](https://book.openxeco.org/book.mobi).
+OpenXeco book is available in [HTML](https://doc.openxeco.org), [PDF](https://doc.openxeco.org/book.pdf), [ePub](https://doc.openxeco.org/book.epub) and [Kindle mobi format](https://doc.openxeco.org/book.mobi).
 
 ## License
 

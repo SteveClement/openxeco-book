@@ -6,7 +6,7 @@ TODO: Add install guide reference
 By cloning and regularly pulling from this repo, users can maintain their own up-to-date offline copy of openXeco documentation rather than relying solely on the web.
 
 OpenXeco book is generated in HTML, PDF, epub, and mobi using [Honkit](https://github.com/honkit/honkit), which is a framework to write documentation in Markdown format.
-The documentation is published on [book.openxeco.org](https://www.openxeco.org/).
+The documentation is published on [doc.openxeco.org](https://www.openxeco.org/).
 
 ## Documentation guidelines
 
@@ -51,7 +51,7 @@ For this, you can either submit a pull request or use another way that suits you
 
 ## Style guidelines
 
-- Familiarize yourself with the terms defined in the [glossary](https://book.openxeco.org/GLOSSARY.html). Use these terms consistently and accurately throughout your writing.
+- Familiarize yourself with the terms defined in the [glossary](https://doc.openxeco.org/GLOSSARY.html). Use these terms consistently and accurately throughout your writing.
 - The language in this book is American English. All the screenshots and examples are in English.
 
 ## Markdown conventions
@@ -59,7 +59,7 @@ For this, you can either submit a pull request or use another way that suits you
 All the documentation is written in Markdown for maximum accessibility. When making contributions, please try to observe the following style conventions:
 
 - Use spaces instead of tabs.
-- To enable offline browsing, always use relative (rather than absolute) links, e.g., openxeco/automation/ instead of https://book.openxeco.org/automation/. Examples of exceptions:
+- To enable offline browsing, always use relative (rather than absolute) links, e.g., openxeco/automation/ instead of https://doc.openxeco.org/automation/. Examples of exceptions:
     - URLs that appear inside code blocks (e.g., in comments and code snippets)
     - Files like README.md and CONTRIBUTING.md
 - Insert a newline at, and only at, the end of each sentence. This practice results in one sentence per line, which is most appropriate for sources that consist primarily of natural language text. It results in the most useful diffs and facilitates translation into other languages while mostly preserving source readability.
