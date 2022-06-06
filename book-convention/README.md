@@ -28,7 +28,6 @@ The examples and screenshots provided in this book have been created with the op
 
 To get a copy of the latest VM [click here](https://vm.openxeco.org/latest/)
 
-
 ## openXeco Instance
 
 In general when talking about a network of inter-connected openXeco servers, each server is an openXeco node. Whilst we have no strong feelings towards anyones naming schemes, as a rule of thumb try to have a scheme that makes everyday use easy when users need to talk about remote openXeco nodes.
@@ -41,6 +40,48 @@ The hostname used for the instance in this book is `openxeco.local` and we will 
 
 ## Example organisations
 
+As example organisations a fictional Cybersecurity Ecosystem is used as well as a fictional Helthtec Ecosystem.
+
+Cyber ecosystem actors:
+
+* Cyber ACME S.A
+* Cyber Beagle s.à r.l
+
+Healthtec ecosystem actors:
+
+* MyHealth S.A
+* Health Data Inc.
+
+## Example users
+
+The users are purely fictional. Where it made sense, distribution lists were used as users. As a good practice, the organisations admin should be a nominative person and shall be changed if the person in charge will move on to other ventures.
+
 ## Example taxonomies
 
+For the Cybersecurity ecosystem the [ECSO taxonmy](https://www.ecs-org.eu/documents/uploads/ecso-cybersecurity-market-radar-taxonomy-table.pdf) shall be used.
+
+As no knwown and widely deployed Healthtec taxonomy is in use, we will create a very basic Taxonmy from scratch and learn how to create custom taxonomies.
+
+### Articles
+
+Under articles we understand: news, events, job offers, services, tools etc.
+
 ## Example news
+
+The news example are chosen randomly at the time of the documentations writing and are always related to the activities of the example organisations.
+
+## Example jobs
+
+The jobs in the examples are purely fictional.
+
+## Example services
+
+The services in the examples are purely fictional.
+
+## Example tools
+
+The tools in the examples are purely fictional but can be real projects as well.
+
+## Real-life coincidences
+
+Any of the above examples, in the rare occasions where they reflect any real-life facts, are purely coincidental.
