@@ -29,8 +29,6 @@ OpenXeco book is available in [HTML](https://doc.openxeco.org), [PDF](https://do
 
 ## License
 
-The openXeco user guide is dual-licensed under [GNU Affero General Public License version 3](http://www.gnu.org/licenses/agpl-3.0.html) and [CC-BY-SA 4.0 international](https://creativecommons.org/licenses/by-sa/4.0/).
+The openXeco user guide is dual-licensed under [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause) and [CC-BY 4.0 international](https://creativecommons.org/licenses/by/4.0/).
 
-* Copyright \(C\) 2022 [Steve Clement](https://github.com/SteveClement)
-* Copyright \(C\) 2022 [Alexis Prunier](https://github.com/alexisprunier)
-* Copyright \(C\) 2022 [Rémi Laurent](https://github.com/remil1000)
+{% include "AUTHORS" %}
