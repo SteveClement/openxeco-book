@@ -5,6 +5,16 @@ And Justice for All! -->
 
 Intro
 
+## Installation
+
+### Development environment
+
+To install a development instance please [follow the openXeco-core README.](https://github.com/CybersecurityLuxembourg/openxeco-core/blob/main/README.md#for-testers=)
+
+### Production environment
+
+Production environment installs are documented in the [main openXeco-core repository.](https://github.com/CybersecurityLuxembourg/openxeco-core/blob/main/doc/INSTALL_SERVER.md)
+
 ## Login into openXeco
 
 openXeco default credentials:
