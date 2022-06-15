@@ -22,3 +22,19 @@ We recommend a standard LAM stack on top of Ubuntu >20.04 LTS. For details on th
 ***
 ## Specific questions
 ### Can I configure openXeco to send encrypted notification mails
+
+
+### How to change config of an already running Docker container?
+
+In case you need to manually modify environment variables for example. The below can be done:
+
+```
+# Changin config for oxe-api container
+D_ID=$(docker ps --no-trunc | grep oxe-api |cut -f1 -d\ )
+docker stop ${D_ID}
+sudo vi /var/lib/docker/containers/${D_ID}/config.v2.json
+# ...
+docker start ${D_ID}
+```
+
+[source](https://stackoverflow.com/questions/48059540/how-to-change-docker-config-of-an-already-running-container)
